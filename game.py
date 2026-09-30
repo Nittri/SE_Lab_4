@@ -77,6 +77,10 @@ class Blackjack:
             wager= int(input("Enter wager: "))
             if(wager>self.chips):
                 print("Please wager at most what you own. No loans")
+                continue
+            elif(wager<=0):
+                print("Wager a positive amount")
+                continue
             elif not self.round(wager):
                 print("Chips Left = ",self.chips)
                 return
