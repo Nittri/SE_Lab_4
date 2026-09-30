@@ -1,0 +1,16 @@
+All the Videos and the Chat History has been uploaded. The given task was simple and involved no new libraries, hence, an LLM was not used to update any of the code. LLM was only used as I am currently unfamiliar with git
+Since No rules were stated regarding the game, the following rules have been implemented.
+
+- A player may draw greater than 21, but he will win if the dealer draws a worse hand (a bigger bust)
+- If no party busts, the party with total closer to 21 wins
+- The dealer is programmed to hit till it reaches a value of over 16.
+- If player hits a black jack, the values are instantly compared. If the dealer did not hit a black jack, the player wins
+
+Summary of changes made to the boilerplate:
+
+-The value of ace swings between 1/11, depending on which of the two values is more benificial to the user.
+-Since the dealers hand is invisible to the player while drawing, its drawing is moved over to before the player. This is done to handle the new bust condition, for which the dealers hand needs to be known
+-Changed the bust system to accomodate dealer losing even if player busts
+-Handled Black Jack
+-Implemented a wager system, handling incorrect wagers and lack of chips
+-Updated the code to show the value of dealers hand and not just the cards as a QOL feature
