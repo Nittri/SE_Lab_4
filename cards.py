@@ -10,7 +10,9 @@ class Deck:
         random.shuffle(self.cards)
 
     def draw(self):
-        return self.cards.pop() if self.cards else None
+        if not self.cards:
+            raise RuntimeError("Deck is empty.")
+        return self.cards.pop()
 
 
 def hand_value(hand):
